@@ -1,0 +1,14 @@
+# Use your pet to fetch potions for the hero.
+
+# Write your code here.
+def goFetch():
+    while True:
+        potion = hero.findNearestItem()
+        if potion:
+            pet.fetch(potion)
+
+
+# Keep this line, if you want to survive.
+# The order is important so this should be the last line.
+pet.on("spawn", goFetch) 
+hero.shield()
