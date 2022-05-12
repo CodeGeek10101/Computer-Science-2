@@ -1,0 +1,18 @@
+# Use your pet to fetch potions while the hero fights.
+
+def goFetch():
+    while True:
+        potion = hero.findNearestItem()
+        if potion:
+            pet.fetch(potion)
+            pass
+
+pet.on("spawn", goFetch)
+
+while True:
+    enemy = hero.findNearestEnemy()
+    if enemy:
+        if hero.isReady("cleave"):
+            hero.cleave(enemy)
+        else:
+            hero.attack(enemy)
