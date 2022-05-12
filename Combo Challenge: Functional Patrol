@@ -1,0 +1,29 @@
+# Move to all the X marks repeatedly, defeat ogres you find there
+
+def move(x, y):
+    hero.moveXY(x, y)
+
+def firstEnemy(enemy):
+    enemy = hero.findNearestEnemy()
+    if enemy:
+        hero.attack(enemy)
+
+def secondEnemy(enemy):
+    enemy = hero.findNearestEnemy()
+    if enemy:
+        hero.attack(enemy)
+
+def thirdEnemy(enemy):
+    enemy = hero.findNearestEnemy()
+    if enemy:
+        hero.attack(enemy)
+
+while True:
+    enemy = hero.findNearestEnemy()
+    firstEnemy(enemy)
+    hero.moveXY(18, 34)
+    secondEnemy(enemy)
+    hero.moveXY(40, 46)
+    enemy = hero.findNearestEnemy()
+    thirdEnemy(enemy)
+    hero.moveXY(62, 34)
