@@ -1,0 +1,18 @@
+# Define a function with multiple parameters, and use it.
+# Move to a point. If an enemy is there, attack it.
+def move(x, y):
+    hero.moveXY(x, y)
+
+while True:
+    hero.moveXY(10, 30)
+    enemy = hero.findNearestEnemy()
+    if enemy:
+        hero.attack(enemy)
+    hero.moveXY(50, 30)
+    enemy = hero.findNearestEnemy()
+    if enemy:
+        hero.attack(enemy)
+    hero.moveXY(30, 10)
+    enemy = hero.findNearestEnemy()
+    if enemy:
+        hero.attack(enemy)
