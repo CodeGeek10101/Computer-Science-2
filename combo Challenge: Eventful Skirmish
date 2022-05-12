@@ -1,0 +1,23 @@
+# Your pet should fetch items when they appear.
+# Your pet should respond using say when it hears something.
+
+def goFetch():
+    while True:
+        potion = hero.findNearestItem()
+        if potion:
+            pet.fetch(potion)
+
+pet.on("spawn", goFetch)
+
+def onHear(event):
+    pet.say("okay")
+
+pet.on("hear", onHear)
+
+while True:
+    enemy = hero.findNearestEnemy()
+    if enemy:
+        if hero.isReady("cleave"):
+            hero.cleave(enemy)
+        else:
+            hero.attack(enemy)
