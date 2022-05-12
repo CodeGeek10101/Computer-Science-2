@@ -1,0 +1,14 @@
+# Move to each red X and check if an enemy is there.
+# If an enemy exists, defeat it before moving on.
+hero.moveXY(18, 14)
+hero.moveXY(18, 54)
+hero.moveXY(62, 54)
+hero.moveXY(62, 14)
+enemy = hero.findNearestEnemy()
+if enemy:
+    hero.attack(enemy)
+    hero.attack(enemy)
+enemy = hero.findNearestEnemy()
+if enemy:
+    hero.attack(enemy)
+    hero.attack(enemy)
