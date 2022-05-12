@@ -1,0 +1,14 @@
+# Free the wild burl from the ogres!
+# If "cleave" is ready, then use it.
+# Else if the distance to an enemy less than 5, then attack it.
+# Else attack the "Door".
+while True:
+    enemy = hero.findNearestEnemy()
+    distance = hero.distanceTo(enemy)
+    if hero.isReady("cleave"):
+        hero.cleave(enemy)
+        pass
+    if distance < 5:
+        hero.attack(enemy)
+    else:
+        hero.attack("Door")
