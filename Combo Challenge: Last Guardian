@@ -1,0 +1,14 @@
+# Defeat all of the ogres.
+# When cleave is ready, cleave. Otherwise attack.
+# If enemies are farther than 10 meters, say the distance so your cannon can fire at them.
+while True:
+    enemy = hero.findNearestEnemy()
+    if hero.isReady("cleave"):
+        hero.cleave(enemy)
+    else:
+        if enemy:
+            hero.attack(enemy) 
+
+distance = hero.distanceTo(enemy)
+if hero.distanceTo(enemy) > 10:
+    hero.say("distance")
