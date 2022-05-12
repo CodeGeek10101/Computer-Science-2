@@ -1,0 +1,20 @@
+# Patrol up and down, stopping at each X mark, in a loop.
+# Build "fire-trap"s to stop the ogres from invading.
+# It's best if you only build when you see an ogre
+while True:
+    hero.moveXY(32, 52)
+    enemy = hero.findNearestEnemy()
+    if enemy:
+        hero.buildXY("fire-trap", 38, 52)
+    hero.moveXY(32, 34)
+    enemy = hero.findNearestEnemy()
+    if enemy:
+        hero.buildXY("fire-trap", 38, 34)
+    hero.moveXY(32, 16)
+    enemy = hero.findNearestEnemy()
+    if enemy:
+        hero.buildXY("fire-trap", 38, 17)
+        hero.moveXY(32, 34)
+    enemy = hero.findNearestEnemy()
+    if enemy:
+        hero.buildXY("fire-trap", 38, 34)
