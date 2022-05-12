@@ -1,0 +1,11 @@
+# Define a function that accepts a parameter.
+# Defeat munchkins, ignore throwers.
+def attackEnemy(enemy):
+    enemy = hero.findNearestEnemy()
+    if enemy and hero.isReady("cleave") and hero.distanceTo(enemy) < 5:
+        hero.cleave(enemy)
+    elif enemy and hero.distanceTo(enemy) <5:
+        hero.attack(enemy)
+while True:
+    enemy = hero.findNearestEnemy()
+    attackEnemy(enemy)
