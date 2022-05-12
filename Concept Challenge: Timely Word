@@ -1,0 +1,7 @@
+# The pet should speak only when it hears a question.
+
+def onHear(event):
+    pet.say("okay")
+    pass
+
+pet.on("hear", onHear)
