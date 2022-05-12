@@ -1,0 +1,21 @@
+# Welcome to the Course 2 Arena. Defend against waves of ogres!
+# Survive longer than your enemy to win!
+
+def petLogic():
+    while True:
+        pet.moveXY(54, 74)
+        pet.moveXY(66, 75)
+        pet.moveXY(60, 84)
+    # Add code to use your pet!
+    # Move them to the power discs at the top of the map for powerups.
+
+
+pet.on('spawn', petLogic)
+
+while True:
+    hero.moveXY(26, 22)
+    hero.moveXY(26, 22)
+    hero.moveXY(14, 31)
+    hero.moveXY(11, 46)
+    hero.moveXY(42, 46)
+    hero.moveXY(37, 30)
